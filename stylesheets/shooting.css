@@ -5,6 +5,9 @@
     content: "";
     position: absolute;
 }
+body{
+  background: #0dcaf0;
+}
 .overlay{
   position: relative;
   top: 0;
@@ -14,7 +17,7 @@
   background: rgba(0, 0, 0, 0.5);
 }
 #hero{
-  background: url("../media/shoot.jpg");
+  background: url("../media/shoot.jpg") center fixed;
   background-size: cover;
 }
 input {

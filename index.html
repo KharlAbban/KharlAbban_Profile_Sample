@@ -1,118 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Workout Hompepage</title>
-    <link rel="icon" type="image/png" href="media/logo_free-file.png">
-    <link rel="stylesheet" href="vendor/bootstrap-5.2.1-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="vendor/fontawesome6/css/all.min.css">
-    <link rel="stylesheet" href="stylesheets/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <title>Frontend Mentor | QR code component</title>
 </head>
+
 <body>
-        <!--Navbar Section-->
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark p-1">
-          <div class="container-fluid">
-            <a class="navbar-brand">KharlStudios</a>
-            <button class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#homenav" type="button"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="homenav">
-              <ul class="navbar-nav mx-auto">
-                <div class="nav-item"><a href="" class="nav-link">Movement</a></div>
-                <div class="nav-item"><a href="" class="nav-link">Shooting</a></div>
-                <div class="nav-item"><a href="pages/def/defindex.html" class="nav-link">Defense</a></div>
-                <div class="nav-item"><a href="" class="nav-link">Skillz</a></div>
-              </ul>
-              <div class="form-group d-none d-lg-block">
-                <input type="search" name="" id="" placeholder="Find something..." class="form-control p-1">
-              </div>
-            </div>
-          </div>
-        </nav>
-
-          <!--Carousel for Items-->
-          <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="container">
-                  <div class="carousel-caption text-start">
-                    <h1>Movement <i class="fas fa-shoe-prints fa-2x"></i></h1>
-                    <p>Learn the right way to move around on the court!!Footwork options, angles, and much more...</p>
-                    <p><a class="btn btn-lg btn-primary" href="#">Build foundation</a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="container">
-                  <div class="carousel-caption">
-                    <h1>Shooting the Ball<i class="fas fa-basketball fa-bounce fa-2x"></i></h1>
-                    <p>~In the end, this game is and always will be about <span class="fw-bold lead">buckets!</span></p>
-                    <p><a class="btn btn-lg btn-outline-primary text-white" href="#">Get <span class="lead">buckets</span> now</a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="container">
-                  <div class="carousel-caption text-end">
-                    <h1>Defense <i class="fas fa-lock fa-shake fa-2x"></i></h1>
-                    <p>Easily the most underrated basketball skill! Wow, seperate yourself by stopping athletic hoopers with ease</p>
-                    <p><a class="btn btn-lg btn-outline-success text-white" href="#">Begin Lockdown</a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="container">
-                  <div class="carousel-caption">
-                    <h1>Finishing <i class="fas fa-trash-can fa-2x"></i></h1>
-                    <p>Get that spin right! Finish like a <span class="lead">pro</span> with these tips</p>
-                    <p><a class="btn btn-lg btn-primary" href="#">Let's gooo!</a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="container">
-                  <div class="carousel-caption text-start">
-                    <h1>Skillz, <i class="fas fa-microscope fa-beat-fade fa-2x"></i> Handles</h1>
-                    <p>Misdirections, combos, off-arm, jabs and a whole more in this elite hooper package!</p>
-                    <p><a class="btn btn-lg btn-primary" href="#">Get shifty <i class="fas fa-bolt-lightning"></i></a></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-          <!--Card Links-->
-        <div class="row mx-5 g-3">
-          <div class="col-sm-6">
-            <div class="card-body">
-              <div class="p-5 bg-dark text-white border rounded-3">
-                <h2>OFFENSIVE WORKOUTS</h2>
-                <a href="pages/off/offhome.html" class="btn btn-outline-success text-white">GoTo Button</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="card-body">
-              <div class="p-5 bg-success text-white border rounded-3">
-                <h2>DEFENSIVE WORKOUTS</h2>
-                <a href="pages/def/defhome.html" class="btn btn-outline-dark text-white">GoTo Button</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      <script src="vendor/popperjs/src/popper.js"></script>
-      <script src="vendor/bootstrap-5.2.1-dist/js/bootstrap.bundle.min.js"></script>
-
-      <script>
-
-      </script>
+  <div id="main">
+    <div id="content">
+      <div id="content-img">
+        <img src="images/image-qr-code.png" alt="">
+      </div>
+      <div id="content-text">
+        <strong>Improve your front-end <br>
+          skills by building projects</strong>
+        <p>Scan the QR code to visit Frontend <br>
+          Mentor and take your coding skills to <br>
+          the next level</p>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>

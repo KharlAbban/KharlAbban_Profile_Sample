@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Outfit:wght@400;700&family=Ubuntu:wght@300&display=swap');
+:root {
+  font-family: 'Hanken Grotesk', 'Outfit', 'Ubuntu', sans-serif;
+  --p-light-red: hsl(0, 100%, 67%);
+  --p-orangey-yellow: hsl(39, 100%, 56%);
+  --p-green-teal: hsl(166, 100%, 37%);
+  --p-cobalt-blue: hsl(234, 85%, 45%);
+  --g-light-slate-blue: hsl(252, 100%, 67%);
+  --g-light-royal-blue: hsl(241, 81%, 54%);
+  --g-violet-blue: hsla(256, 72%, 46%, 1);
+  --g-persian-blue: hsla(241, 72%, 46%, 0);
+  --n-white: hsl(0, 0%, 100%);
+  --n-pale-blue: hsl(221, 100%, 96%);
+  --n-light-lavender: hsl(241, 100%, 89%);
+  --n-dark-gray-blue: hsl(224, 30%, 27%);
+}
+body {
+  font-family: 'Hanken Grotesk', 'Outfit', 'Ubuntu', sans-serif;
+  box-sizing: border-box;
+  font-size: 1rem;
+  color: var(--n-light-lavender);
+}
+#main {
+  width: 50%;
+  height: 70%;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  text-align: center;
+  background: var(--n-white);
+  border-radius: 1rem;
+  box-shadow: 10px 10px 8px var(--n-light-lavender);
+}
+#firstCol {
+  border-radius: 1rem;
+  background: linear-gradient(to top, var(--g-light-royal-blue), var(--g-light-slate-blue));
+}
+#circle {
+  background: linear-gradient(to top, var(--g-persian-blue), var(--g-violet-blue));
+}
+#fColh3_one {
+  color: var(--n-white);
+  font-size: 6rem;
+  font-weight: 800;
+}
+#fColh3_two {
+  color: var(--n-white);
+  font-size: 2rem;
+  font-weight: bold;
+}
+#secondCol {
+  background: var(--n-white);
+  border-radius: 1rem;
+  font-weight: 700;
+}
+#sColh4 {
+  color: var(--n-dark-gray-blue);
+  font-weight: 700;
+}
+#btn {
+  background: var(--n-dark-gray-blue);
+  color: var(--n-pale-blue);
+  transition: 1s ease;
+}
+#btn:hover {
+  background-image: linear-gradient(var(--g-light-royal-blue), var(--g-persian-blue));
+}
+.bolden {
+  color: var(--n-dark-gray-blue);
+}
+.sColitems-reaction {
+  background: hsla(0, 100%, 67%, 0.1);
+}
+.sColitems-reaction > .text-start {
+  color: var(--p-light-red);
+}
+.sColitems-memory {
+  background: hsla(39, 100%, 56%, 0.1);
+}
+.sColitems-memory > .text-start {
+  color: var(--p-orangey-yellow);
+}
+.sColitems-verbal {
+  background: hsla(166, 100%, 37%, 0.1);
+}
+.sColitems-verbal > .text-start {
+  color: var(--p-green-teal);
+}
+.sColitems-visual {
+  background: hsla(234, 85%, 45%, 0.1);
+}
+.sColitems-visual > .text-start {
+  color: var(--p-cobalt-blue);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media  screen and (max-width: 375px) {
+  #main {
+    width: 100%;
+    height: 100%;
+    box-shadow: none;
+  }
+  #sColh4 {
+    margin-top: 0.8rem;
+  }
+}

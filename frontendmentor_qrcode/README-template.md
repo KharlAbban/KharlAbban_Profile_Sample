@@ -19,7 +19,9 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 ![](./images/screenshot.png)
 ### Links
 
-Sorry, I wasn't able to host this project. You can find all relevant files in this repo [github.com/KharlAbban/frontendmentor-qrcode-soln]
+- Solution URL: [KharlAbban](https://github.com/frontendmentor-qrcode-soln)
+- Live Site URL: [Github Pages](https://kharlabban.github.io/frontendmentor-qrcode-soln/)
+
 ## My process
 
 ### Built with

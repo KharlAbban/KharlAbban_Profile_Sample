@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [KharlAbban](https://github.com/frontendmentor-results-summary-soln)
+- Live Site URL: [Github Pages](https://kharlabban.github.io/frontendmentor_results_summary/)
 
 ## My process
 

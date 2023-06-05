@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Outfit:wght@400;700&family=Overpass:wght@400;700&family=Ubuntu:wght@300&display=swap');
+:root {
+  font-size: 15px;
+  font-family: 'Overpass', sans-serif;
+  --p-orange: hsl(25, 97%, 53%);
+  --n-white: hsl(0, 0%, 100%);
+  --n-light-grey: hsl(217, 12%, 63%);
+  --n-medium-grey: hsl(216, 12%, 54%);
+  --n-dark-blue: hsl(213, 19%, 18%);
+  --n-very-dark-blue: hsl(216, 12%, 8%);
+}
+body {
+  background: rgba(0, 0, 0, 0.9);
+  color: var(--n-light-grey);
+}
+.ratingState {
+  margin: auto;
+  background: linear-gradient(to top, var(--n-very-dark-blue), var(--n-dark-blue));
+  box-sizing: border-box;
+  position: absolute;
+  width: 35%;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#rateBtn {
+  color: var(--n-white);
+  background: var(--p-orange);
+  font-weight: bold;
+  letter-spacing: .1rem;
+}
+#rateBtn:hover {
+  background: var(--n-white);
+  color: var(--p-orange);
+  transition: 0.3s ease;
+}
+.ratingState img {
+  background: var(--n-dark-blue);
+  color: var(--p-orange);
+  font-size: 1rem;
+}
+.whiteHeading {
+  color: var(--n-white);
+  font-weight: 700;
+  line-height: 1.5;
+}
+.ratingState p {
+  font-size: 1.1rem;
+}
+
+.attribution {
+  font-size: 1rem;
+  text-align: center;
+  color: var(--n-white);
+}
+.attribution a {
+  color: var(--p-orange);
+}
+input.rate {
+  background: var(--n-dark-blue);
+  color: var(--n-light-grey);
+  border: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+input.rate:hover {
+  background: var(--p-orange);
+  cursor: pointer;
+  color: var(--n-white);
+  transition: 0.3s ease;
+}
+input.rate.clicked {
+  background: var(--n-medium-grey);
+  color: var(--n-white);
+}
+#respSelect {
+  color: var(--p-orange);
+  background: var(--n-dark-blue);
+}
+.bolden {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+#thanksState img {
+  background: linear-gradient(to top, hsla(213, 19%, 18%, 0), var(--n-dark-blue));
+  width: 75%;
+}
+@media screen and (max-width: 768px) {
+  .ratingState {
+    width: 80%;
+    height: 60%;
+    margin: 0;padding: 0;
+  }
+  #thanksState img {
+    width: 50%;
+    display: block;
+    text-align: center;
+  }
+}

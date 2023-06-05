@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script src="index.js" defer></script>
+  <title>Frontend Mentor | Interactive rating component</title>
+</head>
+
+<body>
+  <!-- Rating state start -->
+  <main id="rateState" class="ratingState p-lg-4 p-2 rounded-5 border-black">
+    <div class="container py-2 text-start">
+      <img src="images/icon-star.svg" class="mb-2 p-3 rounded-circle" alt="">
+      <h2 class="whiteHeading mt-3">How did we do?</h2>
+      <p class="">Please let us know how we did with your support request. All feedback is appreciated to help us
+        improve our
+        offering!
+      </p>
+      <div class="row rateRow w-100 text-center mx-auto my-lg-4 my-2 gx-1">
+        <div class="col">
+          <input type="button" value="1" class="rate py-3 px-4 rounded-circle">
+        </div>
+        <div class="col">
+          <input type="button" value="2" class="rate py-3 px-4 rounded-circle">
+        </div>
+        <div class="col">
+          <input type="button" value="3" class="rate py-3 px-4 rounded-circle">
+        </div>
+        <div class="col">
+          <input type="button" value="4" class="rate py-3 px-4 rounded-circle">
+        </div>
+        <div class="col">
+          <input type="button" value="5" class="rate py-3 px-4 rounded-circle">
+        </div>
+      </div>
+      <input type="submit" id="rateBtn" class="btn btn-lg rounded-5 w-100 mt-3" value="Submit">
+    </div>
+  </main>
+
+  <!-- Rating state end -->
+
+  <!-- Thank you state start -->
+  <main id="thanksState" class="d-none ratingState p-lg-4 rounded-5 border-black text-center">
+    <div class="container py-2">
+      <img src="images/illustration-thank-you.svg" class="thanksImg mb-2 p-3 mx-auto" alt="">
+      <h5 class="d-inline-block mt-2 py-2 px-3 rounded-5" id="respSelect">You selected <span id="selected"></span> out
+        of 5</h5>
+      <h2 class="whiteHeading mt-2">Thank you!</h2>
+      <p class="bolden">We appreciate you taking the time to give a rating. If you ever need more support,
+        don't hesitate to get in touch!
+      </p>
+    </div>
+  </main>
+
+  <!-- Thank you state end -->
+
+
+  <div class="attribution fixed-bottom mb-3">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://KharlAbban.github.io">Er-Carl Abban</a>.
+  </div>
+</body>
+
+</html>

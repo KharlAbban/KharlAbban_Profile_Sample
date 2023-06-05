@@ -72,34 +72,40 @@ body {
 }
 .sColitems-reaction {
   background: hsla(0, 100%, 67%, 0.1);
+  border: 1px solid var(--p-light-red);
 }
 .sColitems-reaction > .text-start {
   color: var(--p-light-red);
 }
 .sColitems-memory {
+  /* background: hsla(39, 100%, 56%, 0.1); */
   background: hsla(39, 100%, 56%, 0.1);
+  border: 1px solid var(--p-orangey-yellow);
 }
 .sColitems-memory > .text-start {
   color: var(--p-orangey-yellow);
 }
 .sColitems-verbal {
   background: hsla(166, 100%, 37%, 0.1);
+  border: 1px solid var(--p-green-teal);
 }
 .sColitems-verbal > .text-start {
   color: var(--p-green-teal);
 }
 .sColitems-visual {
   background: hsla(234, 85%, 45%, 0.1);
+  border: 1px solid var(--p-cobalt-blue);
 }
 .sColitems-visual > .text-start {
   color: var(--p-cobalt-blue);
 }
 .attribution {
-  font-size: 11px;
+  font-size: 1rem;
+  color: var(--p-cobalt-blue);
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--g-violet-blue);
 }
 @media  screen and (max-width: 375px) {
   #main {

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- <meta http-equiv="refresh" content="5"> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+
+  <main id="main" class="row bg-white">
+    <img src="images/illustration-box-desktop.svg" class="fColImgTwo d-none d-lg-block" alt="">
+    <div class="col-md-6 py-5 px-0 my-md-5 d-flex align-content-center flex-column firstCol">
+      <img src="images/illustration-woman-online-desktop.svg" class="fColImg d-none d-md-block" alt="">
+      <img src="images/illustration-woman-online-mobile.svg" class="img-fluid fColImgThree" alt="">
+    </div>
+    <div class="col h-100 p-lg-4 py-md-2 px-md-4 faq-section">
+      <h1 class="text-start faq-heading my-5">FAQ</h1>
+      <div class="container my-4">
+        <div class="mb-3 acc-card shadow">
+          <div class="acc-header">
+            <button class="pt-2 text-start d-block w-100 acc-toggle-link" data-accordion-button>
+              How many team members can I invite?
+              <span class="float-end mr-3">
+                <img src="images/icon-arrow-down.svg" class="button-link-img" alt="">
+              </span>
+            </button>
+          </div>
+          <div class="acc-content text-start" data-accordion-content>
+            You can invite up to 2 additional users on the Free plan. There is no limit on
+            team members for the Premium plan.
+          </div>
+        </div>
+        <div class="mb-3 acc-card shadow">
+          <div class="acc-header">
+            <button class="pt-2 text-start d-block w-100 acc-toggle-link" data-accordion-button>
+              What is the maximum file upload size?
+              <span class="float-end mr-3">
+                <img src="images/icon-arrow-down.svg" class="button-link-img" alt="">
+              </span>
+            </button>
+          </div>
+          <div class="acc-content text-start" data-accordion-content>
+            No more than 2GB. All files in your account must fit your allotted storage space.
+          </div>
+        </div>
+        <div class="mb-3 acc-card shadow">
+          <div class="acc-header">
+            <button class="pt-2 text-start d-block w-100 acc-toggle-link" data-accordion-button>
+              How do I reset my password?
+              <span class="float-end mr-3">
+                <img src="images/icon-arrow-down.svg" class="button-link-img" alt="">
+              </span>
+            </button>
+          </div>
+          <div class="acc-content text-start" data-accordion-content>
+            Click “Forgot password” from the login page or “Change password” from your profile page.
+            A reset link will be emailed to you.
+          </div>
+        </div>
+        <div class="mb-3 acc-card shadow">
+          <div class="acc-header">
+            <button class="pt-2 text-start d-block w-100 acc-toggle-link" data-accordion-button>
+              Can I cancel my subscription?
+              <span class="float-end mr-3">
+                <img src="images/icon-arrow-down.svg" class="button-link-img" alt="">
+              </span>
+            </button>
+          </div>
+          <div class="acc-content text-start" data-accordion-content>
+            Yes! Send us a message and we’ll process your request no questions asked.
+          </div>
+        </div>
+        <div class="mb-5 acc-card shadow">
+          <div class="acc-header">
+            <button class="pt-2 text-start d-block w-100 acc-toggle-link" data-accordion-button>
+              Do you provide additional support?
+              <span class="float-end mr-3">
+                <img src="images/icon-arrow-down.svg" class="button-link-img" alt="">
+              </span>
+            </button>
+          </div>
+          <div class="acc-content text-start" data-accordion-content>
+            Chat and email support is available 24/7. Phone lines are open during normal business hours.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="attribution fixed-bottom mb-3 fs-4">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://KharlAbban.github.io">Er-Carl Abban</a>.
+  </div>
+</body>
+
+</html>

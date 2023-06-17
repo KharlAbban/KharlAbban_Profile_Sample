@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 12px;
+  --p-very-dark-desat-blue: hsl(238, 29%, 16%);
+  --p-soft-red: hsl(14, 88%, 65%);
+  --g-soft-violet: hsl(273, 75%, 66%);
+  --g-soft-blue: hsl(240, 73%, 65%);
+  --n-very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --n-dark-grayish-blue: hsl(240, 6%, 50%);
+  --n-light-grayish-blue: hsl(240, 5%, 91%);
+}
+body {
+  background: linear-gradient(to top, var(--g-soft-blue), var(--g-soft-violet)) no-repeat;
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed;
+}
+.attribution {
+  width: 100%;
+  font-size: 1.2rem;
+  color: var(--p-very-dark-desat-blue);
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 1rem;
+}
+.attribution a {
+  color: var(--p-soft-red);
+}
+#main {
+  width: 70%;
+  height: auto;
+  /* max-height: 510px; */
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  text-align: center;
+  background: var(--n-white);
+  border-radius: 1rem;
+  box-shadow: 10px 10px 8px var(--n-light-lavender);
+}
+.firstCol {
+  background-image: url("images/bg-pattern-desktop.svg");
+  background-size: cover;
+  max-height: 555px;
+  position: relative;
+  overflow-x: hidden;
+}
+.fColImg {
+  translate: -19% 0;
+}
+.fColImgTwo {
+  position: absolute;
+  width: 190px;
+  top: 43%;
+  left:  -9.9%;
+  z-index: 999;
+}
+.acc-toggle-link {
+  font-weight: normal;
+  font-size: 1.3rem;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  padding: 0.9rem;
+  background: none;
+  border-bottom: 1px solid var(--n-very-dark-grayish-blue);
+  transition: 500ms ease-in-out;
+}
+.acc-toggle-link.active {
+  font-weight: 700;
+}
+.button-link-img {
+  transition: 500ms ease-in-out;
+}
+.acc-toggle-link.active .button-link-img {
+  transform: scaleY(-1);
+}
+.acc-content {
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  font-size: 1.1rem;
+  transition: 500ms ease-in-out;
+}
+.acc-content.open {
+  padding: 0.5rem;
+  height: 55px;
+}
+@media  screen and (max-width: 768px) {
+  h1.faq-heading {
+    text-align: center;
+    font-weight: 700;
+  }
+  .firstCol {
+    background-image: url("images/bg-pattern-mobile.svg") no-repeat center center;
+    background-size: cover;
+    overflow: visible !important;
+    max-height: 50px;
+  }
+  .fColImgThree {
+    width: 60%;
+    translate: 0 -80%;
+    margin: 0 auto;
+  }
+}
+@media  screen and (max-width: 375px) {
+  #main {
+    width: 100%;
+    box-shadow: none;
+  }
+}
+@media  screen and (min-width: 768px) {
+  .fColImgThree {
+    display: none;
+  }
+}

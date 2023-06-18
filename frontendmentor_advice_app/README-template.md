@@ -1,6 +1,6 @@
-# Frontend Mentor - FAQ accordion card solution
+# Frontend Mentor - Advice generator app solution
 
-This is a solution to the [FAQ accordion card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Advice generator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -22,17 +22,18 @@ This is a solution to the [FAQ accordion card challenge on Frontend Mentor](http
 
 Users should be able to:
 
-- View the optimal layout for the component depending on their device's screen size
+- View the optimal layout for the app depending on their device's screen size
 - See hover states for all interactive elements on the page
-- Hide/Show the answer to a question when the question is clicked
+- Generate a new piece of advice by clicking the dice icon
 
 ### Screenshot
 
 ![](./screenshot.png)
+
 ### Links
 
-- Solution URL: [GitHub](https://github.com/KharlAbban/frontendmentor-interactive-rating)
-- Live Site URL: [GitHub Pages](https://kharlabban.github.io/frontendmentor_interactive_rating/index.html)
+- Solution URL: [GitHub](https://github.com/KharlAbban/frontendmentor-advice-app-soln)
+- Live Site URL: [GitHub Pages](https://kharlabban.github.io/frontendmentor_advice_app/index.html)
 
 ## My process
 
@@ -42,26 +43,25 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
+- Vanilla JS
 - Mobile-first workflow
 - [Bootstrap 5](https://getbootstrap.com) - CSS Framework
-- Vanilla JavaScript
+- Advice Slip API
 
 ### What I learned
 
-This one really tested my understanding of CSS positions and display properties. I had fun working out
-how to use the @media queries to size and display different elements.
-
+It was quite fun to review and wokr once again on using APIs. This was a basic API call but I enjoyed the challenge.
 
 ### Continued development
 
-Next step is to fine-tune the desktop layout so thatthe images on the left are displayed correctly.
+I hope to automate the site so that the Advice Loading... display becomes an animation.
 
 ### Useful resources
-
 - [Bootstrap 5](https://www.getbootstrap.com) - This CSS framework is amazing. It virtually does all the styling and grid work for you. Check it out!
 - [W3Schools](https://www.w3schools.com) - This is an amazing article which helped me throughout with helpful CSS tips, best practices, and examples.
 - [Google Fonts](https://fonts.google.com) - This font collection really helped me spped up my workflow. I simply copied the @import code generated and I was good to go.
 - [Stack Overflow](https://stackoverflow.com) - This is a very helpful technical and developer solution base. I found a lot of the answers to my issues here.
+- [Web Dev Simplified](https://www.youtube.com/WebDevSimplified) - This channel has been a great learning source for all my frontend works. Do check him out!
 
 ## Author
 

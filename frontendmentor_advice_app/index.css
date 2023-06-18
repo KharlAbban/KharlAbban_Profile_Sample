@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+:root {
+  --p-light-cyan: hsl(193, 38%, 86%);
+  --p-neon-green: hsl(150, 100%, 66%);
+  --n-grayish-blue: hsl(217, 19%, 38%);
+  --n-dark-grayish-blue: hsl(217, 19%, 24%);
+  --n-dark-blue: hsl(218, 23%, 16%);
+  font-size: 28px;
+}
+body {
+  background-color: var(--n-dark-blue);
+  color: var(--p-light-cyan);
+  font-family: 'Manrope', sans-serif;
+}
+.mainDiv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  max-width: 475px;
+  background-color: var(--n-dark-grayish-blue);
+  border: 1px solid var(--n-dark-blue);
+}
+.advice-heading {
+  font-size: 0.6rem;
+  color: var(--p-neon-green);
+}
+.advice-pattern-divider {
+  width: 80%;
+  display: inline-block;
+}
+.advice-button-container {
+  position: absolute;
+}
+.advice-button {
+  background-color: var(--p-neon-green);
+  border: none;
+  outline: none;
+  color: var(--n-dark-blue);
+  margin: 0;
+  padding: 0.2rem 0.6rem 0.4rem 0.6rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -1rem;
+  left: calc(50% - 1rem);
+  transition: 200ms ease-in;
+}
+.advice-button:hover {
+  box-shadow: 0 0 1rem hsla(150, 100%, 66%, 0.8);
+}
+.attribution {
+  font-size: 0.5rem;
+  text-align: center;
+}
+.attribution a {
+  color: var(--p-neon-green);
+}

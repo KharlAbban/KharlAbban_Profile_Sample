@@ -1,0 +1,293 @@
+#hoop, #beer-pong {
+  height: 40px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 40px;
+}
+.playground-row {
+  max-height: 340px;
+}
+.playground-col {
+  max-width: 540px;
+}
+.playground-col:nth-child(1) .toggle-wrapper {
+  background: var(--color-night);
+  color: var(--color-white);
+}
+.playground-col:nth-child(2) .toggle-wrapper {
+  background: var(--color-citrine);
+  color: var(--color-night);
+}
+.toggle-wrapper {
+  flex: 1 1 calc(100% / 3);
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+@media (max-width: 960px) {
+  .toggle-wrapper {
+    flex: 1 1 calc(100% / 2);
+  }
+}
+@media (max-width: 700px) {
+  .toggle-wrapper {
+    flex: 1 1 100%;
+  }
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+}
+
+label.toggle-item {
+  width: 7em;
+  background: #2e394d;
+  height: 3em;
+  display: inline-block;
+  border-radius: 50px;
+  margin: 40px;
+  position: relative;
+  transition: all 0.3s ease;
+  transform-origin: 20% center;
+  cursor: pointer;
+}
+label.toggle-item:before {
+  display: block;
+  transition: all 0.2s ease;
+  width: 2.3em;
+  height: 2.3em;
+  top: 0.25em;
+  left: 0.25em;
+  border-radius: 2em;
+  border: 2px solid #88cf8f;
+  transition: 0.3s ease;
+}
+.beer-pong label:before {
+  background: #f9f9f9;
+  box-shadow: inset 0 -3px 0 0 #c6c5c5;
+  border: none;
+  width: 2.5em;
+  height: 2.5em;
+  top: 0.25em;
+  left: 0.25em;
+}
+.beer-pong .cup {
+  top: -3%;
+  right: -118px;
+  border-top: 90px solid #f44336;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  height: 3px;
+  position: absolute;
+  width: 80px;
+  transform-origin: bottom right;
+  transition: 0.2s cubic-bezier(0.42, 0.5, 0.58, 1);
+}
+.beer-pong .cup:before {
+  box-shadow: 0 -10px 0 0px rgba(39, 39, 39, 0.1), 0px -20px 0 0px rgba(39, 39, 39, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+  background: rgba(39, 39, 39, 0.1);
+  width: 120%;
+  left: -5px;
+  height: 4px;
+  top: -40px;
+}
+.beer-pong .cup .lid {
+  position: absolute;
+  width: 95px;
+  height: 8px;
+  border-radius: 20px;
+  background: #efefef;
+  bottom: 86px;
+  left: -23px;
+}
+.beer-pong .cup .lid:after {
+  background: #efefef;
+  width: 48px;
+  height: 5px;
+  left: 50%;
+  margin-left: -24px;
+  top: 94px;
+  border-radius: 0 0 3px 3px;
+}
+
+#beer-pong:checked ~ .cup {
+  animation: 0.2s linear cup 1s forwards;
+}
+#beer-pong:checked + label:before {
+  animation: 2s linear bounce-off forwards;
+}
+
+@keyframes cup {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: rotate(75deg) translate(10px, 15px);
+  }
+  90% {
+    transform: rotate(70deg) translate(10px, 15px);
+  }
+  100% {
+    transform: rotate(75deg) translate(10px, 15px);
+  }
+}
+@keyframes bounce-off {
+  0% {
+    transform: translateY(0);
+  }
+  10%, 25% {
+    transform: translate(-20px, -80px);
+  }
+  50% {
+    transform: rotate(163deg);
+    transform-origin: 100px -12px;
+  }
+  70% {
+    transform: rotate(0) translate(-3px, -8px);
+    transform-origin: 100px -12px;
+  }
+  75% {
+    transform: translate(20px, -8px);
+  }
+  80% {
+    transform: translate(30px, 0px);
+  }
+  85% {
+    transform: translate(40px, -3px);
+  }
+  87% {
+    transform: translate(46px, 0px);
+  }
+  90% {
+    transform: translate(52px, -1px);
+  }
+  95% {
+    transform: translate(60px, 0px);
+  }
+  100% {
+    transform: translate(64px, 0px);
+  }
+}
+.basketball-hoop label {
+  background: #fdb827;
+}
+.basketball-hoop label:before {
+  content: none;
+}
+.basketball-hoop .ball {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  position: absolute;
+  background: #FF9800;
+  border: 2px solid black;
+  transition: 0.4s ease;
+  top: 4px;
+  left: 4px;
+  background-image: radial-gradient(circle at -5px 10px, transparent 15px, black 15px, black 17px, transparent 17px), radial-gradient(circle at 41px 25px, transparent 15px, black 15px, black 17px, transparent 17px), linear-gradient(110deg, transparent 22px, black 22px, black 24px, transparent 24px), linear-gradient(18deg, transparent 22px, black 22px, black 24px, transparent 24px);
+}
+.basketball-hoop .ball__wrapper {
+  transition: 0.4s ease;
+  width: 195%;
+  height: 200%;
+  transform-origin: 50% -2%;
+}
+.basketball-hoop .hoop {
+  top: -50px;
+  right: -84px;
+  width: 50px;
+  background: #f44336;
+  height: 8px;
+  position: absolute;
+}
+.basketball-hoop .hoop:before {
+  position: absolute;
+  right: -4px;
+  width: 7px;
+  height: 60px;
+  background: #cd2e22;
+  top: -40px;
+}
+.basketball-hoop .hoop:after {
+  width: 40px;
+  height: 35px;
+  background: repeating-linear-gradient(45deg, transparent, transparent 13px, white 13px, white 15px), repeating-linear-gradient(-45deg, transparent, transparent 13px, white 13px, white 15px);
+  top: 8px;
+  border-radius: 0 0 20% 20%/40% 40% 60% 60%;
+  border: 2px solid #fff;
+  border-width: 0 2px;
+  left: 2px;
+  z-index: 20;
+}
+
+#hoop:checked + label {
+  background: #542583;
+  transition-delay: 1.35s;
+}
+#hoop:checked + label .ball__wrapper {
+  animation: 1.5s linear ball-wrapper forwards;
+}
+#hoop:checked + label .ball {
+  animation: 1.5s linear ball forwards;
+}
+
+@keyframes ball {
+  0% {
+    transform: none;
+  }
+  40% {
+    transform: rotate(-150deg);
+  }
+  48% {
+    transform: rotate(-150deg) translateY(92px);
+  }
+  52% {
+    transform: rotate(-150deg) translate(-10px, 80px);
+  }
+  56% {
+    transform: rotate(-150deg) translate(-25px, 91px);
+  }
+  60% {
+    transform: rotate(-150deg) translate(-35px, 86px);
+  }
+  65% {
+    transform: rotate(-150deg) translate(-45px, 91px);
+  }
+  70% {
+    transform: rotate(-150deg) translate(-50px, 87px);
+  }
+  75% {
+    transform: rotate(-150deg) translate(-60px, 91px);
+  }
+  80% {
+    transform: rotate(-150deg) translate(-65px, 88px);
+  }
+  85% {
+    transform: rotate(-150deg) translate(-70px, 91px);
+  }
+  90% {
+    transform: rotate(-150deg) translate(-75px, 90px);
+  }
+  95% {
+    transform: rotate(-150deg) translate(-80px, 90px);
+  }
+  100% {
+    transform: rotate(-150deg) translate(-82px, 91px);
+  }
+}
+@keyframes ball-wrapper {
+  0% {
+    transform: none;
+  }
+  40%, 100% {
+    transform: rotate(150deg);
+  }
+}

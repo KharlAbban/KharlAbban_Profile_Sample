@@ -1,0 +1,23 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.btn{
+    padding: 4.5px 7.5px;
+    margin-right: 10px;
+}
+#gamespace{
+    width: 612px;
+    height: 408px;
+    display: flex;
+    flex-wrap: wrap;
+}
+h2{
+    text-align: center;
+}
+.border{
+    border: 1px solid #000;
+}
+.centerise{
+    position: relative;
+    left: 20%;
+}

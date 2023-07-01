@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Ysabeau+Infant:ital,wght@0,1;0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import 'play.css';
+* {
+    box-sizing: border-box;
+}
+*:before, *:after {
+    content: "";
+    position: absolute;
+}
+:root {
+    --color-white: hsl(0, 0%, 100%);
+    --color-night: #0D0A0B;
+    --color-charcoal: #454955;
+    --color-magnolia: #fcfdff;
+    --color-palatinate-blue: #1429E8;
+    --color-citrine: #DDD92A;
+    --transition-duration: 200ms;
+}
+body {
+    font-family: 'Ysabeau Infant', sans-serif;
+    overflow-x: hidden;
+    background: #fcfdff;
+    color: var(--color-night);
+}
+.page-sidebar {
+    border-right: 2px solid var(--color-charcoal);
+    padding-left: 0;
+    padding-right: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    min-width: 200px;
+    max-width: 300px;
+    overflow-y: auto;
+    background: url("../media/bg.jpg");
+    background-size: cover;
+    transition: all ease-in 0.5s;
+    z-index: 998;
+}
+.sidebar-profile-name {
+    font-style: italic;
+}
+.img-container {
+    display: block;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 1px solid var(--color-night);
+    overflow: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0); /* fixed the zoom in Safari */
+    transition: border 0.35s ease-in-out;
+    margin: 1rem auto;
+}
+.img-container:hover {
+    border: 2px solid var(--color-charcoal);
+}
+.sidebar-profile-img {
+    width: 100%;
+    height: 100%;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+}
+.sidebar-profile-img:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.sidebar-nav-text {
+    font-weight: bold;
+    transition: var(--transition-duration) ease;
+}
+.sidebar-nav-text:hover {
+    background: var(--color-palatinate-blue);
+    padding: 0.2rem 1rem;
+    border-radius: 0.8rem;
+    color: var(--color-white);
+    font-weight: 200;
+}
+.sidebar-sm-link {
+    font-size: 1.2rem;
+    background: transparent;
+}
+.sidebar-nav-link {
+    text-decoration: none;
+    color: var(--color-night);
+    transition: 500ms ease-out;
+}
+.sidebar-nav-fb:hover,
+.sidebar-nav-fb:hover .fa-facebook {
+    color: var(--color-white);
+    background: var(--color-palatinate-blue);
+}
+.sidebar-nav-li:hover,
+.sidebar-nav-li:hover .fa-facebook {
+    color: var(--color-white);
+    background: var(--color-palatinate-blue);
+}
+.sidebar-nav-rd:hover,
+.sidebar-nav-rd:hover .fa-facebook {
+    color: var(--color-white);
+    background: var(--color-palatinate-blue);
+}
+.sidebar-nav-tw:hover,
+.sidebar-nav-tw:hover .fa-facebook {
+    color: var(--color-white);
+    background: var(--color-palatinate-blue);
+}
+/*Nav Toggle button and back to top*/
+#nav-toggle-btn {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    padding: 10px;
+    background-color: var(--color-palatinate-blue);
+    color: var(--color-magnolia);
+    font-size: 2.5rem;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+#nav-toggle-btn:hover {
+    background: var(--color-magnolia);
+    color: var(--color-palatinate-blue);
+}
+.nav-toggle-active .page-sidebar {
+    left: 0;
+}
+.scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    padding: 10px;
+    background-color: var(--color-palatinate-blue);
+    color: #fff;
+    font-size: 2rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.4s;
+    visibility: hidden;
+    opacity: 0;
+}
+.scroll-top-btn.active {
+    visibility: visible;
+    opacity: 1;
+}
+/*End of navbar toggle and back to top*/
+/*Jumbotron Style*/
+#jumbotron {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    background: url("../media/logo_land.jpg") no-repeat center/contain;
+    /* background-size: 90vh auto; */
+}
+#jumbotron::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+.jumbotron-container {
+    position: relative;
+    z-index: 2;
+    min-width: 300px;
+}
+#jumbotron h1 {
+    font-weight: 700;
+    line-height: 55px;
+    color: #fff;
+    font-size: 65px;
+    margin: 0 0 10px 0;
+}
+#jumbotron p {
+    color: #fff;
+    margin-bottom: 50px;
+    font-size: 26px;
+    font-family: "Poppins", sans-serif;
+}
+#jumbotron p span {
+    color: #DDD92A;
+}
+.bio-main {
+    background-color: #fcfdff !important;
+    margin-left: 200px;
+}
+.section-heading {
+    border-bottom: 2px solid var(--color-palatinate-blue);
+}
+.section-title{
+    font-weight: bold;
+}
+.whats-new-card {
+    max-width: 300px;
+}
+.whats-new-btn-view {
+    color: var(--color-palatinate-blue);
+    border-color: var(--color-palatinate-blue);
+}
+.whats-new-btn-view:hover {
+    color: var(--color-magnolia);
+    background: var(--color-palatinate-blue);
+}
+.whats-new-btn-edit {
+    color: var(--color-night);
+    border-color: var(--color-night);
+}
+.whats-new-btn-edit:hover {
+    color: var(--color-magnolia);
+    background: var(--color-night);
+}
+.project-card {
+    border: 1px solid rgba(20, 41, 232, 0.2);
+}
+.project-view-btn {
+    border-radius: 0;
+}
+#map {
+    min-height: 55vh;
+}
+.formBtn {
+    background: var(--color-palatinate-blue);
+    color: var(--color-white);
+    transition: 0.4s;
+}
+.formBtn:hover {
+    background: var(--color-charcoal);
+}
+.overlay {
+    position: relative;
+}
+.overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent black overlay */
+    pointer-events: none; /* Allows clicks to pass through to underlying elements */
+}
+.project-modal-bg-img {
+    min-height: 45vh;
+    height: 50vh;
+    max-height: 55vh;
+    /* background: url("bg.jpg") no-repeat 100%; */
+    background-size: cover;
+}
+.project-modal-content {
+    translate: 0 -2rem;
+    background: #dfe6e9;
+}
+.modal-body {
+    background: #dfe6e9;
+}
+.project-modal-content-border {
+    border-left: 0.4rem solid #1429E8;
+}
+.contact-form-content {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 1008px) {
+    #nav-toggle-btn {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+    }
+    .page-sidebar {
+        left: -300px;
+    }
+    #jumbotron h1 {
+        font-size: 27px;
+        line-height: 35px;
+    }
+    .bio-main {
+        margin-left: 0;
+    }
+}
+
+

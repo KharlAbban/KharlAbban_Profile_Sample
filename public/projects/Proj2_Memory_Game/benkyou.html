@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watashi no benkyou</title>
+    <link rel="stylesheet" href="benkyou.css">
+</head>
+<body>
+
+    <h1><center><u>Welcome to the MemoryGame</u></center></h1>
+    <h3>Score: <span id="score">0</span></h3>
+    <button class="btn" id="start">Start Game</button>
+    <button class="btn" id="stop">Stop playing</button>
+<hr>
+<h4 id="position"></h4>
+
+
+    
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).on('mousemove', function (e) {
+            $("#position").html("Pointer position: <br>" + "X: " + e.pageX + "<br>Y: " + e.pageY);
+        })
+
+
+
+
+        /*----------Start of MemoryGame Code-------------*/
+        const cards = [
+        {
+            name: "bicycle",
+            img: "images/bicycle.png"
+        },
+        {
+            name: "boat",
+            img: "images/boat.png"
+        },
+        {
+            name: "cheeseburger",
+            img: "images/cheeseburger.png"
+        },
+        {
+            name: "fries",
+            img: "images/fries.png"
+        },
+        {
+            name: "gamepad",
+            img: "images/gamepad.png"
+        },
+        {
+            name: "guy",
+            img: "images/guy.png"
+        },
+        {
+            name: "hotdog",
+            img: "images/hotdog.png"
+        },
+        {
+            name: "ice-cream",
+            img: "images/ice-cream.png"
+        },
+        {
+            name: "milkshake",
+            img: "images/milkshake.png"
+        },
+        {
+            name: "naruto",
+            img: "images/naruto.png"
+        },
+        {
+            name: "pizza",
+            img: "images/pizza.png"
+        },
+        {
+            name: "tanjirou",
+            img: "images/tanjirou.png"
+        },
+        {
+            name: "bicycle",
+            img: "images/bicycle.png"
+        },
+        {
+            name: "boat",
+            img: "images/boat.png"
+        },
+        {
+            name: "cheeseburger",
+            img: "images/cheeseburger.png"
+        },
+        {
+            name: "fries",
+            img: "images/fries.png"
+        },
+        {
+            name: "gamepad",
+            img: "images/gamepad.png"
+        },
+        {
+            name: "guy",
+            img: "images/guy.png"
+        },
+        {
+            name: "hotdog",
+            img: "images/hotdog.png"
+        },
+        {
+            name: "ice-cream",
+            img: "images/ice-cream.png"
+        },
+        {
+            name: "milkshake",
+            img: "images/milkshake.png"
+        },
+        {
+            name: "naruto",
+            img: "images/naruto.png"
+        },
+        {
+            name: "pizza",
+            img: "images/pizza.png"
+        },
+        {
+            name: "tanjirou",
+            img: "images/tanjirou.png"
+        }
+    ]
+        cards.sort(() => 0.5 - Math.random()); 
+        var score = document.getElementById("score");
+        var message = document.getElementById("msg");
+        let clickedCard =[];
+        let clickedCardId = [];
+        let cardsWon = 0;
+
+        $("#start").on('click', function () {
+            var makespace = $("<div id='gamespace' class='centerise'></div><h2 id='msg'></h2>");
+            $("hr").after(makespace);
+            $("#start").attr("disabled","true");
+            createBoard();
+        });
+
+        $("#stop").on("click", function () {
+            var verify = prompt("Stop", 'No').toLowerCase();
+            if (verify == "yes") {
+                $("#gamespace").html("");
+                $("#gamespace").removeAttr("id");
+                $("#msg").text("Awww!You would have had a lot of fun.");
+                $("#start").removeAttr("disabled");
+            }
+        });
+
+        //function that creates the board
+        function createBoard() {
+        var gameboard = document.getElementById("gamespace");
+        for (let i = 0; i < cards.length; i++) {
+            const card = document.createElement("img");
+            card.setAttribute("class","border");
+            card.setAttribute("src","images/blank.png");
+            card.addEventListener("click", flipTheCard);
+            card.setAttribute("data-id",i);
+            gameboard.appendChild(card);
+        }
+    }
+
+        //flipping the card on click
+        function flipTheCard() {
+        var images = document.querySelectorAll("img");
+        let cardId = this.getAttribute("data-id");
+        clickedCard.push(cards[cardId].name);
+        clickedCardId.push(cardId);
+        this.setAttribute("src",cards[cardId].img);
+        if (clickedCard.length == 2) {
+            setTimeout(checkValidity, 1000);
+        }
+    }
+
+        // validity checker
+        function checkValidity() {
+        const gamecards = $("img");
+        const cardOneId = clickedCardId[0];
+        const cardTwoId = clickedCardId[1];
+        //check for same card click, correct match, no match
+        if (cardOneId == cardTwoId) {
+            $("#msg").text("You have clicked the same image!");
+            gamecards[cardOneId].setAttribute("src","images/blank.png");
+            gamecards[cardTwoId].setAttribute("src","images/blank.png");
+        } else if (clickedCard[0] == clickedCard[1]) {
+            $("#msg").text("You have found a match!");
+            gamecards[cardOneId].setAttribute("src", "images/white.png");
+            gamecards[cardTwoId].setAttribute("src", "images/white.png");
+            gamecards[cardOneId].setAttribute("class","border");
+            gamecards[cardTwoId].setAttribute("class","border");
+            gamecards[cardOneId].removeEventListener("click", flipTheCard);
+            gamecards[cardTwoId].removeEventListener("click", flipTheCard);
+            cardsWon++;
+        } else {
+            $("#msg").text("Sorry, try again!");
+            gamecards[cardOneId].setAttribute("src","images/blank.png");
+            gamecards[cardTwoId].setAttribute("src","images/blank.png");
+        }
+        //clear clicked card and clicked card id arrays
+        clickedCard = [];
+        clickedCardId = [];
+        //update score
+        $("#score").text(cardsWon);
+        //check whether all cards are matched
+        if (cardsWon == cards.length / 2) {
+            $("#gamespace").html("");
+            $("#gamespace").removeAttr("id");
+            $("#start").removeAttr("disabled");
+            $("#msg").text("Congrats!!!!You found all the cards.");
+
+        }
+    }
+
+/*------------End of MemoryGame Code----------------*/
+
+
+    </script>
+</body>
+</html>

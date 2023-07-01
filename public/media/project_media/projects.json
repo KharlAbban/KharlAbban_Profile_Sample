@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Bball Workouts",
+    "author": "Khvng Kharl",
+    "startDate": "",
+    "endDate": "",
+    "duration": "1 week",
+    "status": "ongoing",
+    "codeBase": "https://github.com",
+    "liveUrl": "https://kharlabban.github.io",
+    "bgImg": "logo.jpg",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias unde ipsa libero maiores corrupti nam id consequatur aut sed explicabo neque dicta quia, nihil saepe molestiae veniam exercitationem nobis corporis magnam possimus dolore ducimus. Enim officiis vel veritatis pariatur doloribus.",
+    "languages": ["HTML", "CSS", "Vanilla JS", "NodeJS"]
+  }
+]

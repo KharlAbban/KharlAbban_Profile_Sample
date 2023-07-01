@@ -1,0 +1,46 @@
+body {
+  background: #a7e6bb;
+}
+#lock {
+  font-size: 350px;
+}
+#hero {
+  margin-bottom: 2em;
+  min-height: 450px;
+  height: 500px;
+  background: url("../media/steal.jpg") no-repeat 25% fixed;
+  background-size: cover;
+}
+.overlay{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(0, 0, 0, 0.8);
+}
+svg.bi{
+  background: inherit;
+}
+.modal-body{
+  height: 400px;
+}
+iframe{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .moving-text{
+      animation: marquee 5s linear infinite;
+  }
+}
+.moving-text:hover{
+  animation-play-state: paused;
+}
+@keyframes marquee{
+  0%{transform: translateX(0);}
+  100%{transform: translateX(-100%);}
+}

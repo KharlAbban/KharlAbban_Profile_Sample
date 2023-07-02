@@ -230,6 +230,10 @@ body {
 .project-view-btn {
     border-radius: 0;
 }
+[data-project-card-bg] {
+    /* background: url("../media/project_media/bball-workout.png"); */
+    background-size: cover;
+}
 #map {
     min-height: 55vh;
 }

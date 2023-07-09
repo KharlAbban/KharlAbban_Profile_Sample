@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("index_dark.css");
+@import url("switch.css");
+:root {
+  --color-p-lime-green: hsl(163, 72%, 41%);
+  --color-p-bright-red: hsl(356, 69%, 56%);
+  --color-p-facebook: hsl(208, 92%, 53%);
+  --color-p-twitter: hsl(203, 89%, 53%);
+  --color-p-instagram: linear-gradient(
+    to right,
+    hsl(37, 97%, 70%),
+    hsl(329, 70%, 58%)
+  );
+  --color-p-youtube: hsl(348, 97%, 39%);
+  --color-dark-toggle: linear-gradient(
+    to right,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
+  );
+  --color-light-toggle: hsl(230, 22%, 74%);
+  --color-n-light-white-bg: hsl(0, 0%, 100%);
+  --color-n-light-very-pale-blue: hsl(225, 100%, 98%);
+  --color-n-light-light-grayish-blue: hsl(228, 50%, 96%);
+  --color-n-light-dark-grayish-blue: hsl(228, 12%, 44%);
+  --color-n-light-very-dark-blue: hsl(230, 17%, 14%);
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+  background: var(--color-n-light-white-bg);
+  color: var(--color-n-light-dark-grayish-blue);
+  overflow-x: hidden;
+  transition: all 0.2s;
+}
+.top-bg-section {
+  background: var(--color-n-light-very-pale-blue);
+  min-height: 35vh;
+}
+.header-theme-toggle-section {
+  vertical-align: middle;
+}
+.mainContainer {
+  position: absolute;
+  top: 0;
+}
+.light-theme-gray-text {
+  color: var(--color-n-light-dark-grayish-blue);
+}
+.light-theme-dark-text {
+  color: var(--color-n-light-very-dark-blue);
+  font-weight: bold;
+  margin: 0;
+}
+.sm-stats-card {
+  background: var(--color-n-light-light-grayish-blue);
+  transition: background 0.2s;
+  max-width: 260px;
+  max-height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.sm-stats-card:hover {
+  background: hsl(223, 11%, 88%);
+  cursor: pointer;
+}
+.fb-stats-card {
+  border-top: 0.3rem solid var(--color-p-facebook);
+}
+.tw-stats-card {
+  border-top: 0.3rem solid var(--color-p-twitter);
+}
+.ig-stats-card {
+  position: relative;
+  border-top: 0.3rem solid transparent;
+}
+.ig-stats-card::before {
+  content: "";
+  position: absolute;
+  top: -0.3rem;
+  left: 0;
+  right: 0;
+  height: 0.3rem;
+  background: var(--color-p-instagram);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.yt-stats-card {
+  border-top: 0.3rem solid var(--color-p-youtube);
+}
+.sm-stats-card-number {
+  font-size: 3rem;
+}
+.sm-card-followers {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.sm-stats-card-level-up {
+  color: var(--color-p-lime-green);
+  font-weight: bold;
+}
+.sm-stats-card-level-down {
+  color: var(--color-p-bright-red);
+  font-weight: bold;
+}
+.top-60 {
+  top: 60% !important;
+}
+.attribution {
+  text-align: center;
+  color: var(--color-n-dark-very-dark-blue-bg);
+}
+.attribution a {
+  text-decoration: none;
+  color: var(--color-p-facebook);
+}
+
+@media screen and (max-width: 992px) {
+  .sm-stats-card {
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sm-stats-card {
+    margin-bottom: 1rem;
+  }
+  .top-60 {
+    top: 80% !important;
+  }
+  .sm-header-col-1 {
+    padding-bottom: 1rem;
+    border-bottom: 0.1rem solid var(--color-n-light-dark-grayish-blue);
+  }
+}
+@media screen and (max-width: 576px) {
+  .sm-header-col-2 {
+    margin-top: 0.8rem;
+  }
+}

@@ -1,0 +1,57 @@
+body.dark {
+  --color-p-instagram: linear-gradient(
+    to right,
+    hsl(37, 97%, 70%) to hsl(329, 70%, 58%)
+  );
+  --color-n-dark-very-dark-blue-bg: hsl(230, 17%, 14%);
+  --color-n-dark-very-dark-blue-topbg: hsl(232, 19%, 15%);
+  --color-n-dark-dark-desat-blue: hsl(228, 28%, 20%);
+  --color-n-dark-desat-blue: hsl(228, 34%, 66%);
+  --color-n-dark-white: hsl(0, 0%, 100%);
+  background: var(--color-n-dark-very-dark-blue-bg);
+  color: var(--color-n-dark-desat-blue);
+}
+body.dark .top-bg-section {
+  background: var(--color-n-dark-very-dark-blue-topbg);
+  min-height: 35vh;
+}
+body.dark .light-theme-gray-text {
+  color: var(--color-n-dark-desat-blue);
+}
+body.dark .light-theme-dark-text {
+  color: var(--color-n-dark-white);
+}
+body.dark .sm-stats-card {
+  background: var(--color-n-dark-dark-desat-blue);
+}
+body.dark .sm-stats-card:hover {
+  background: hsl(229, 26%, 28%);
+  cursor: pointer;
+}
+body.dark .ig-stats-card {
+  position: relative;
+  border-top: 0.3rem solid transparent;
+}
+body.dark .ig-stats-card::before {
+  content: "";
+  z-index: 900;
+  position: absolute;
+  top: -0.3rem;
+  left: 0;
+  right: 0;
+  height: 0.3rem;
+  background: linear-gradient(
+    to right,
+    hsl(37, 97%, 70%) to hsl(329, 70%, 58%)
+  );
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+body.dark .attribution {
+  text-align: center;
+  color: var(--color-n-dark-white);
+}
+body.dark .attribution a {
+  text-decoration: none;
+  color: var(--color-p-youtube);
+}

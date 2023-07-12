@@ -37,16 +37,19 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 var marker = L.marker([6.064566399999999, -0.2628136]).addTo(map);
 //Event Listener for View Project Button
 projectViewBtns.forEach((viewBtn) => {
-    viewBtn.addEventListener("click", getProjectDetails)
+    viewBtn.addEventListener("click", setProjectDetails)
 });
 
 
 //Every Function below this comment
-
-//Fetch Function to get and set projects on load
-async function getAllProjects () {
+async function getProjects () {
     const response = await fetch(projectsFileUrl);
     const projectData = await response.json();
+    return projectData;
+}
+//Fetch Function to get and set projects on load
+async function setAllProjects () {
+    const projectData = await getProjects();
     projectCard.forEach((card, index) => {
         // let randomIndex = Math.floor(Math.random() * projectData.length);
         card.setAttribute("data-project-card", index);
@@ -58,12 +61,11 @@ async function getAllProjects () {
         card.querySelector("[data-project-card-status]").textContent = `Status: ${projectData[index].status}`;
     });
 }
-getAllProjects();
+setAllProjects();
 
 //Function to set details of modal when a project is clicked
-async function getProjectDetails (Event) {
-    const response = await fetch(projectsFileUrl);
-    const projectData = await response.json();
+async function setProjectDetails (Event) {
+    const projectData = await getProjects();
     var btnCard = Event.target.parentElement.parentElement.parentElement;
     var projectIndex = parseInt(btnCard.getAttribute("data-project-card"));
     console.log(projectData[projectIndex]);

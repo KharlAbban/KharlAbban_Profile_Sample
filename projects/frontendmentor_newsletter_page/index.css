@@ -1,0 +1,141 @@
+@import url("assets/fonts/Roboto-Bold.ttf");
+@import url("assets/fonts/Roboto-Regular.ttf");
+:root {
+  --color-p-tomato: hsl(4, 100%, 67%);
+  --color-n-dark-slate-grey: hsl(234, 29%, 20%);
+  --color-n-charcoal-grey: hsl(235, 18%, 26%);
+  --color-n-grey: hsl(231, 7%, 60%);
+  --color-n-white: hsl(0, 0%, 100%);
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background: var(--color-n-charcoal-grey);
+  color: var(--color-n-dark-slate-grey);
+}
+.newsletter-container {
+  width: 60%;
+  height: 80%;
+  top: 12.5%;
+  left: 20%;
+  max-width: 800px;
+  max-height: 700px;
+  border-radius: 1.5rem;
+  background: var(--color-n-white);
+  transition: all 0.2s;
+}
+.thank-you-container {
+  width: 30%;
+  /* height: 50%; */
+  top: 25%;
+  left: 35%;
+  max-width: 380px;
+  border-radius: 1.5rem;
+  background: var(--color-n-white);
+  display: none;
+  transition: all 0.2s;
+}
+.thank-you-container.show {
+  display: inline-block;
+}
+.newsletter-container.hide {
+  display: none;
+}
+p {
+  font-size: 0.9rem;
+}
+.newsletter-text-col,
+.newsletter-bg-col {
+  height: 92%;
+  border-radius: 1.2rem;
+}
+.email-input {
+  padding: 9px 15px;
+  border: 1px solid var(--color-n-grey);
+  font-size: 1.3rem;
+  border-radius: 0.3rem;
+}
+.newsletter-btn {
+  background: var(--color-n-dark-slate-grey);
+  color: var(--color-n-white);
+  transition: 0.2s;
+}
+.newsletter-btn:hover,
+.thanks-btn:hover {
+  box-shadow: 0 8px 20px var(--color-p-tomato);
+  background: linear-gradient(to right, var(--color-p-tomato), orange);
+  color: var(--color-n-white);
+}
+.thanks-btn {
+  background: var(--color-n-dark-slate-grey);
+  color: var(--color-n-white);
+  transition: 0.2s;
+}
+.newsletter-bg-col {
+  background: url("assets/images/illustration-sign-up-desktop.svg") no-repeat;
+  background-size: cover;
+}
+
+.attribution {
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--color-n-grey);
+}
+.invalid-feedback {
+  font-size: 0.9rem;
+  color: var(--color-p-tomato);
+}
+.attribution a {
+  color: var(--color-p-tomato);
+}
+@media screen and (max-width: 1086px) {
+  .attribution {
+    display: none;
+  }
+  .newsletter-container {
+    width: 90%;
+    left: 5%;
+    top: 7%;
+    height: 85%;
+    max-height: none;
+  }
+  .thank-you-container {
+    width: 80%;
+    height: 80%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 768px) {
+  .newsletter-container {
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 2rem;
+  }
+  .newsletter-bg-col {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin: 0;
+    min-height: 30vh;
+    width: 100%;
+    background: url("assets/images/illustration-sign-up-mobile.svg") no-repeat;
+    background-size: cover;
+  }
+  .thank-you-container {
+    width: 80%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0;
+  }
+  .thanks-img {
+    margin-bottom: 2rem;
+  }
+}

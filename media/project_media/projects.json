@@ -158,21 +158,5 @@
     "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod debitis est placeat.",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias unde ipsa libero maiores corrupti nam id consequatur aut sed explicabo neque dicta quia, nihil saepe molestiae veniam exercitationem nobis corporis magnam possimus dolore ducimus. Enim officiis vel veritatis pariatur doloribus.",
     "languages": ["HTML", "CSS", "Vanilla JS", "NodeJS"]
-  },
-  {
-    "id": 11,
-    "title": "Newsletter SignUp Page",
-    "author": "Er-Carl Abban",
-    "startDate": "July 9, 2023",
-    "endDate": "July 11, 2023",
-    "duration": "2 days",
-    "status": "Completed",
-    "codeBase": "https://github.com/KharlAbban/frontendmentor-newsletter-signup-soln",
-    "liveUrl": "https://kharlabban.github.io/projects/frontendmentor_newsletter_page/index.html",
-    "bgImg": "newsletter-bg.png",
-    "thumbnail": "newsletter.png",
-    "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod debitis est placeat.",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias unde ipsa libero maiores corrupti nam id consequatur aut sed explicabo neque dicta quia, nihil saepe molestiae veniam exercitationem nobis corporis magnam possimus dolore ducimus. Enim officiis vel veritatis pariatur doloribus.",
-    "languages": ["HTML", "CSS", "Vanilla JS"]
   }
 ]

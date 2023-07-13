@@ -3,6 +3,7 @@ const projectCard = Array.from(document.querySelectorAll("[data-project-card]"))
 const projectModal = document.querySelector("[data-modal-project]");
 const projectsFileUrl = "media/project_media/projects.json";
 const projectViewBtns = document.querySelectorAll(".project-view-btn");
+const newCards = document.querySelectorAll("[data-card-new]");
 document.getElementById("year").textContent = new Date().getFullYear();
 
 //Animation for typed words
@@ -42,11 +43,82 @@ projectViewBtns.forEach((viewBtn) => {
 
 
 //Every Function below this comment
+//Function to get project data
 async function getProjects () {
     const response = await fetch(projectsFileUrl);
     const projectData = await response.json();
     return projectData;
 }
+//Function to Splice Array (Sends items with empty endDate to last index)
+function spliceArray(array, index) {
+    if (index >= array.length || index < 0) {
+      // Invalid index
+      return array;
+    }
+    const element = array.splice(index, 1)[0];
+    array.push(element);
+    return array;
+}
+//Function to set text for milliseconds
+function getDateFormat(milliSecs) {
+    let seconds = Math.floor(milliSecs/1000);
+    let minutes = Math.floor(milliSecs / (1000 * 60));
+    let hours = Math.floor(milliSecs / (1000 * 60 * 60));
+    let days = Math.floor(milliSecs / (1000 * 60 * 60 * 24));
+    let weeks = Math.floor(milliSecs / (1000 * 60 * 60 * 24 * 7));
+    let months = Math.floor(milliSecs / (1000 * 60 * 60 * 24 * 7 * 4));
+    let years = Math.floor(milliSecs / (1000 * 60 * 60 * 24 * 7 * 4 * 12));
+
+    switch (true) {
+        case milliSecs >= (1000 * 60 * 60 * 24 * 7 * 4 * 12):
+            return years + " years ago";
+            break;
+        case milliSecs >= (1000 * 60 * 60 * 24 * 7 * 4):
+            return months + " months ago";
+            break;
+        case milliSecs >= (1000 * 60 * 60 * 24 * 7):
+            return weeks + " weeks ago";
+            break;
+        case milliSecs >= (1000 * 60 * 60 * 24):
+            return days + " days ago";
+            break;
+        case milliSecs >= (1000 * 60 * 60):
+            return hours + " hours ago";
+            break;
+        case milliSecs >= (1000 * 60):
+            return minutes + " minutes ago";
+            break;
+        case milliSecs >= (1000):
+            return seconds + " seconds ago";
+            break;
+        default:
+            break;
+    }
+}
+//Function to set whats new
+async function whatsNew () {
+    const projectData = await getProjects();
+    //Sort Array
+    projectData.sort(function (a, b) {
+        return new Date(b.endDate) - new Date(a.endDate);
+    });
+    //Move elements with empty end dates to last index
+    projectData.forEach((item) => {
+        if (!item.endDate == "") return;
+        spliceArray(projectData, projectData.indexOf(item));
+    });
+    //Set Content for each New Card
+    newCards.forEach((newCard, index) => {
+        newCard.querySelector("[data-card-new-title]").textContent = projectData[index].title;
+        newCard.querySelector("[data-card-new-summary]").textContent = projectData[index].summary;
+        newCard.querySelector("[data-card-new-view-btn]").setAttribute("href", projectData[index].liveUrl);
+        newCard.querySelector("[data-card-new-edit-btn]").setAttribute("href", projectData[index].codeBase);
+        //get milliseconds nad pass to function to return text
+        const milliSecs = new Date() - new Date(projectData[index].endDate);
+        newCard.querySelector("[data-new-card-time]").textContent = getDateFormat(milliSecs);//endDate
+    });
+}
+whatsNew();
 //Fetch Function to get and set projects on load
 async function setAllProjects () {
     const projectData = await getProjects();

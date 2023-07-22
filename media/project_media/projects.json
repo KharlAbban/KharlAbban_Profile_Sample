@@ -174,5 +174,21 @@
     "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod debitis est placeat.",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias unde ipsa libero maiores corrupti nam id consequatur aut sed explicabo neque dicta quia, nihil saepe molestiae veniam exercitationem nobis corporis magnam possimus dolore ducimus. Enim officiis vel veritatis pariatur doloribus.",
     "languages": ["HTML", "CSS", "Vanilla JS"]
+  },
+  {
+    "id": 12,
+    "title": "Time Tracker App Design",
+    "author": "Er-Carl Abban",
+    "startDate": "July 21, 2023",
+    "endDate": "July 22, 2023",
+    "duration": "1 day",
+    "status": "Completed",
+    "codeBase": "https://github.com/KharlAbban/frontendmentor-time-tracking-soln",
+    "liveUrl": "https://kharlabban.github.io/projects/frontendmentor_time_tracker/index.html",
+    "bgImg": "time-tracker-bg.png",
+    "thumbnail": "time-tracker.png",
+    "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod debitis est placeat.",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias unde ipsa libero maiores corrupti nam id consequatur aut sed explicabo neque dicta quia, nihil saepe molestiae veniam exercitationem nobis corporis magnam possimus dolore ducimus. Enim officiis vel veritatis pariatur doloribus.",
+    "languages": ["HTML", "CSS", "Vanilla JS"]
   }
 ]

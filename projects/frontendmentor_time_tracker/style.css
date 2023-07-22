@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+  --p-blue:  hsl(246, 80%, 60%);
+  --p-light-red-work: hsl(15, 100%, 70%);
+  --p-soft-blue-play: hsl(195, 74%, 62%);
+  --p-light-red-study: hsl(348, 100%, 68%);
+  --p-lime-green-exercise:  hsl(145, 58%, 55%);
+  --p-violet-social:  hsl(264, 64%, 52%);
+  --p-soft-orange-self:  hsl(43, 84%, 65%);
+  --n-very-dark-blue:  hsl(226, 43%, 10%);
+  --n-dark-blue: hsl(235, 46%, 20%);
+  --n-desat-blue:  hsl(235, 45%, 61%);
+  --n-pale-blue:  hsl(236, 100%, 87%);
+  font-size: 18px;
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: var(--n-very-dark-blue);
+  color: var(--n-desat-blue);
+}
+h1,h2, h3, h4, h5, h6, a.active-text {
+  color: var(--n-pale-blue);
+}
+a:hover {
+  color: var(--n-pale-blue);
+}
+.work-card {
+  background: var(--p-light-red-work);
+}
+.play-card {
+  background: var(--p-soft-blue-play);
+}
+.study-card {
+  background: var(--p-light-red-study);
+}
+.exercise-card {
+  background: var(--p-lime-green-exercise);
+}
+.social-card {
+  background: var(--p-violet-social);
+}
+.self-card {
+  background: var(--p-soft-orange-self);
+}
+.imgSpan img{
+  border-radius: 50%;
+  border: 3px solid var(--n-pale-blue)
+}
+.card-bg-img {
+  height: 60px;
+  width: 60px;
+  aspect-ratio: 1/1;
+  transform: translateY(-10px);
+  z-index: 0;
+}
+.time-card {
+  overflow: hidden;
+  height: 225px;
+  width: 230px;
+}
+.card-current-hour {
+  font-size: 3rem;
+}
+.h-85 {
+  height: 85% !important;
+}
+.h-70 {
+  height: 70% !important;
+}
+.h-15 {
+  height: 15% !important;
+}
+a {
+  text-decoration: none;
+  color: var(--n-desat-blue);
+}
+.tracker-main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  min-height: 70vh;
+}
+.firstCol {
+  max-width: 290px;
+  max-height: 470px;
+  background: var(--n-dark-blue);
+  border-radius: 0.8rem;
+}
+.top-part {
+  background: var(--p-blue);
+  border-radius: 0.8rem;
+}
+.secondCol {
+  grid-template-columns: repeat(auto-fill, 230px);
+  row-gap: 1rem;
+}
+.card-content {
+  background: var(--n-dark-blue);
+  z-index: 50;
+  transition: 0.3s;
+}
+.card-content:hover {
+  background: hsl(246, 80%, 60%);
+}
+.attribution {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--p-soft-orange-self);
+}
+
+@media screen and (max-width: 1220px) {
+  main {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .tracker-main {
+    height: max-content;
+  }
+  .container-fluid {
+    width: 100%;
+    max-width: none;
+    display: block;
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+  }
+  .top-part {
+    padding: 0;
+  }
+  .time-card {
+    margin-bottom: 0.5rem;
+  }
+  .firstCol {
+    margin-bottom: 0.5rem;
+  }
+}
